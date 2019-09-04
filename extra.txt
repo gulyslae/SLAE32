@@ -1,0 +1,2 @@
+shellcode accepted by exploit-db.com +10
+post blog posts to twitter

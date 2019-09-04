@@ -1,0 +1,13 @@
+this assignment has been splitted in 2 (actually 4) exercises:
+1) xor.py takes a shellcode and xor it with a given starting value, then xor each bytes with previous original one plus something
+she eventually can xor it with all valid ascii values (0,255) and inc from 1 to 9 to find valid pairing, kept in mind that both plain and encoded shellcode cannot contain null bytes
+2) xor.asm does the same, in asm, but doesn't says you have to "null terminate" (read xor.py to understand). also cannot print shellcode in hex, but prints it as code: you have to pipe to xxd to get the value
+3) unxor.py does the reverse: takes encoded shellcode, inc and firstxor and gives back the plain shellcode
+4) unxor.asm does the same, in asm, but also executes the shellcode
+
+i did the steps also in python3 to confirm that everything's ok: it's not THAT easy to debug an idea using asm :)
+
+used shellcode is a slightly modified version of execve-stack. i remove .data section and all functions to have a straight code.
+you can read it at 04_execve_stack.asm
+
+This blog post has been created for completing the requirements of the SecurityTube Linux Assembly Expert certification: http://securitytube-training.com/online-courses/securitytube-linux-assembly-expert/
